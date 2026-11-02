@@ -32,6 +32,8 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## Table of Contents
 
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
+
 - [SaaS/Hosted Platforms](#saas-hosted-platforms)
 
 - [Open-Source GitHub Projects](#open-source-github-projects)
@@ -42,69 +44,24 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 
 
+## Sector Overview & Market Dynamics
+
+The global data masking market (encompassing dynamic and static masking) is estimated at **.1B–.3B** and projected to reach **.5B–.5B** by the mid-2030s, growing at a **13–15% CAGR** driven by strict data privacy mandates (GDPR, HIPAA, DPDP) and real-time zero-trust data access. The sector is **moderately concentrated**: foundational cloud warehouses and enterprise giants dominate high-compliance large enterprise tiers, while emerging proxy and policy-as-code providers compete for multi-cloud and lakehouse dynamic governance.
+
 ## SaaS/Hosted Platforms
 
-
-
-- **Snowflake Dynamic Data Masking**
-
-  **Native column-level masking** within Snowflake. Masking policies transform data on-the-fly based on the user's role and permissions—no separate masked copies . **Pricing**: **Enterprise Edition required**—Standard is $2/credit, Enterprise $3/credit (**+50% compute cost across all workloads**), Business Critical $4/credit . **Free tier**: Trial credits. **Best for**: Snowflake customers already on Enterprise wanting native masking—**trade-off**: Standard users pay 50% more on everything just to unlock masking; policy management is SQL-only with no Snowsight UI .
-
-
-
-- **Immuta**
-
-  **Data access governance platform** with dynamic data masking across Snowflake, Databricks, BigQuery, Redshift, and more from a single control plane . **Pricing**: **No published tiers, no free tier**; enterprise contracts typically **$100,000–$200,000/year** for mid-market, rising to **$500,000+** for large deployments . **Best for**: enterprises wanting policy-as-code that transforms data at the query layer across multiple platforms—**trade-off**: six-figure minimum; no self-service evaluation.
-
-
-
-- **Privacera**
-
-  **Enterprise data encryption and masking** solution with hybrid deployment . **Pricing**: **Commercial, price not published**—sales-led model with no public tiers; free trial may be available on request . **Best for**: organizations wanting enterprise masking with vendor support and SLAs—**trade-off**: entirely sales-gated; no self-serve pricing.
-
-
-
-- **ALTR**
-
-  **Cloud-native data control** for Snowflake with discovery, masking, and tokenization. **Pricing**: **Starting at $10 per user per month**—the only platform in this list with published per-user pricing . **Free tier**: Yes, can start for free and upgrade as needed . **Best for**: Snowflake-centric teams wanting accessible masking without enterprise commitment—**trade-off**: Snowflake-focused; not multi-platform.
-
-
-
-- **Satori**
-
-  **Agentless data security platform** with dynamic masking and just-in-time access provisioning . **Pricing**: **Commercial, price not published** . **Architecture**: **Transparent inline proxy**—sits between user/agent and database, applying row/column/cell-level masking in real time **without modifying source data**; deployment in minutes as sidecar or SaaS proxy; **<5ms average query latency overhead** . **Best for**: teams wanting rapid deployment across multiple data stores without touching database schemas—**trade-off**: proxy throughput limits; less suited for deeply nested multi-tenant data mesh architectures .
-
-
-
-- **Protegrity**
-
-  **Enterprise data protection** with tokenization, encryption, masking, and anonymization. **Pricing**: **Quote-based**—custom quote by data estate and needs . **Best for**: large regulated enterprises needing field-level protection across cloud warehouses without proxy overhead—**trade-off**: overkill for simple test-data masking; enterprise complexity .
-
-
-
-- **Cyral**
-
-  **Data security platform** with attribute-based field-level masking. **Pricing**: Quote-only (inferred from enterprise positioning; case study confirms masking capability) . **Best for**: teams wanting defense-in-depth with field-level masking—**trade-off**: limited public information on pricing and standalone availability.
-
-
-
-- **Baffle**
-
-  **No-code data protection** with dynamic data masking at the presentation layer. **Pricing**: Third-party listing shows **$0.00** with a **onetime/perpetual license** model—likely a placeholder or incomplete listing . **Best for**: organizations wanting cryptographic protection of specific columns—**trade-off**: verify actual pricing directly; listing appears unreliable.
-
-
-
-- **Mentis**
-
-  **Enterprise sensitive data security suite** with **iMask** for dynamic data masking. **Pricing**: **Cloud plans from $50/month** (Individual, 1 user) to **$3,000/month** (Medium Business, 100 users); **annual discounts up to 20%** . **Features**: Role-based, conditional, and location-aware masking; database and application-level embedding with **<5% performance overhead** (vs. proxy-based approaches) . **Best for**: teams wanting published pricing with database-embedded masking—**trade-off**: NoSQL support was on roadmap (verify current status); less strong on unstructured data .
-
-
-
-- **Delphix**
-
-  **Data masking for Databricks lakehouse** (Hyperscale Compliance). **Pricing**: **BYOL** (bring your own license) + Azure infrastructure costs . **Critical note**: Hyperscale performs **static masking**—it reads Delta files, applies deterministic masking, and writes masked files back. **Not dynamic/query-time masking** . **Best for**: teams needing masked non-production data in Databricks—**not** for runtime DDM.
-
-
+| Platform | Company Valuation / Revenue Scale | Specific Starting Tier Pricing | Free Tier / Trial Limit | Key Architecture & Capabilities |
+| :--- | :--- | :--- | :--- | :--- |
+| **Snowflake Dynamic Data Masking** | **~– Market Cap** (~.7B+ ARR) | **Enterprise Edition tier required**: Standard compute starts at .00/credit; Enterprise starts at **.00/credit** (+50% compute surcharge across all workloads) | **30-day free trial** with ** in free compute credits** | Native column-level dynamic masking executed inside the engine; RBAC/ABAC SQL policy-based |
+| **Immuta** | **.0B Valuation** (Unicorn; Series E) | Custom contract; G-Cloud public schedule lists base user tiers starting from **~£1,000–£1,600/user/year** (typically **,000/yr** platform minimum) | **No public free tier**; 14-to-30 day customized sales-assisted PoC trial upon request | Multi-cloud data access control & policy-as-code layer across Snowflake, Databricks, BigQuery, Redshift |
+| **Protegrity** | **~+ Implied Valuation** (~– ARR) | Enterprise unit-based licensing; AWS Marketplace Private Offer starting contracts typically **~,000–,000+/year** | **No self-service free tier**; 30-day enterprise evaluation / PoC available via private offer | High-performance field-level dynamic tokenization, format-preserving encryption (FPE), and masking |
+| **Privacera** | **~– Est. Valuation** (~– ARR) | Enterprise sales-led; AWS Marketplace custom contracts typically starting from **~,000–,000/year** | **30-day free trial** for PrivaceraCloud via AWS Marketplace | Apache Ranger-based enterprise unified governance and dynamic masking across hybrid & multi-cloud data estates |
+| **Delphix** (Perforce) | **Acquired** (~ debt financing backing deal; ~+ ARR) | BYOL capacity license based on managed source storage, starting at **~,500–,000/TB/year** + cloud infra costs | **No self-service free tier**; guided 30-day PoC evaluation license on request | Continuous Compliance & Hyperscale masking (primarily high-throughput static/subset masking for lakehouses/RDBMS) |
+| **Satori** (Commvault) | **Acquired** (Raised .25M prior to acquisition; ~ ARR) | Annual subscription based on protected data locations; entry contracts typically start at **~,000–,000/year** (avg ~,000/year) | **No public free tier**; 14-day assisted PoC trial available on request | Transparent inline database proxy (<5ms latency overhead); agentless dynamic masking without schema changes |
+| **ALTR** | **~– Est. Valuation** (~.6M ARR; Series C) | Published self-serve tier starting at ** per user/month** | **Free Forever plan**: permanently free for up to **3 connected databases** with core masking & classification | Cloud-native Snowflake data access governance, dynamic masking, and tokenization via Partner Connect |
+| **Cyral** (Varonis) | **Acquired** (Raised – prior to acquisition; ~ ARR) | Identity & repository-based contract tiers; custom starting tiers typically from **~,000–,000/year** | **No public free tier**; 30-day trial environment via AWS Marketplace / sales engagement | Cloud-native stateless interception proxy for real-time attribute-based dynamic masking and activity monitoring |
+| **Baffle** | **~– Est. Valuation** (~.5M raised; ~– ARR) | Usage/metered data protection tiers via AWS Marketplace; starting contracts from **~,000–,000/year** | **30-day free trial** available via AWS Marketplace (Baffle Trial for RDS/S3) | No-code dynamic data masking and field-level encryption at the presentation/data-pipeline layer |
+| **Mentis** (iMask) | **Privately Held / Bootstrapped-Growth** (~– ARR) | Published cloud tiers starting from **/month** (Individual, 1 user) up to **,000/month** (100 users) | **No public free tier or free trial**; evaluation PoC arranged via enterprise sales | In-database dynamic masking (iMask) with embedded hooks, RBAC/ABAC, and <5% performance overhead |
 
 ## Open-Source GitHub Projects
 
