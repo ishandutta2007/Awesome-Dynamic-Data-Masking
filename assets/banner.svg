@@ -120,7 +120,7 @@
     <!-- Stream Node 3 -->
     <rect x="620" y="0" width="220" height="42" rx="21" fill="url(#cardGrad)" stroke="rgba(192, 132, 252, 0.4)" stroke-width="1.5" />
     <text x="730" y="26" fill="#34d399" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" text-anchor="middle">
-      ***-**-6789 &bull; &bull;&bull;&bull;&bull; 4111
+      ***-**-6789 &#8226; &#8226;&#8226;&#8226;&#8226; 4111
     </text>
   </g>
 
@@ -141,19 +141,19 @@
 
     <!-- Subtitle / Tagline -->
     <text x="600" y="160" fill="#f1f5f9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="500" text-anchor="middle">
-      Query-Time Redaction &bull; Policy-as-Code &bull; Transparent Proxies &bull; PII Anonymization
+      Query-Time Redaction &#8226; Policy-as-Code &#8226; Transparent Proxies &#8226; PII Anonymization
     </text>
 
     <!-- Feature Highlights / Tags -->
     <text x="600" y="195" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="400" text-anchor="middle">
-      Enterprise SaaS Market Breakdown &bull; Battle-Tested Open Source Repositories &bull; Zero-Trust Data Governance
+      Enterprise SaaS Market Breakdown &#8226; Battle-Tested Open Source Repositories &#8226; Zero-Trust Data Governance
     </text>
 
     <!-- Bottom Metadata Indicators -->
     <g transform="translate(600, 375)">
       <rect x="-240" y="-15" width="480" height="30" rx="15" fill="rgba(15, 23, 42, 0.75)" stroke="rgba(148, 163, 184, 0.2)" stroke-width="1" />
       <text x="0" y="5" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500" text-anchor="middle">
-        🔒 GDPR &bull; HIPAA &bull; PCI-DSS &bull; DPDP Compliance Ready
+        🔒 GDPR &#8226; HIPAA &#8226; PCI-DSS &#8226; DPDP Compliance Ready
       </text>
     </g>
   </g>
