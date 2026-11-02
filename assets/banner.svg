@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#060911" />
+    </linearGradient>
+
+    <linearGradient id="primaryGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(30, 41, 59, 0.7)" />
+      <stop offset="100%" stop-color="rgba(15, 23, 42, 0.85)" />
+    </linearGradient>
+
+    <linearGradient id="maskStream" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.2" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="cyberGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(148, 163, 184, 0.07)" stroke-width="1" />
+    </pattern>
+
+    <!-- Glowing Orbs Filters -->
+    <filter id="blurFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="60" />
+    </filter>
+    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      .pulse-orb-1 {
+        animation: pulse1 8s ease-in-out infinite alternate;
+      }
+      .pulse-orb-2 {
+        animation: pulse2 10s ease-in-out infinite alternate;
+      }
+      .stream-flow {
+        stroke-dasharray: 12, 12;
+        animation: streamFlow 25s linear infinite;
+      }
+      .data-token {
+        animation: tokenFade 4s ease-in-out infinite;
+      }
+      @keyframes pulse1 {
+        0% { transform: scale(0.9) translate(-20px, 10px); opacity: 0.35; }
+        100% { transform: scale(1.15) translate(30px, -20px); opacity: 0.65; }
+      }
+      @keyframes pulse2 {
+        0% { transform: scale(1.1) translate(10px, -10px); opacity: 0.3; }
+        100% { transform: scale(0.85) translate(-30px, 20px); opacity: 0.6; }
+      }
+      @keyframes streamFlow {
+        from { stroke-dashoffset: 400; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes tokenFade {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 0.9; }
+      }
+      .badge-pill {
+        transition: transform 0.3s ease;
+      }
+    </style>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1200" height="420" rx="16" fill="url(#bgGrad)" />
+  <rect width="1200" height="420" rx="16" fill="url(#cyberGrid)" />
+
+  <!-- Dynamic Glowing Orbs in Background -->
+  <g filter="url(#blurFilter)">
+    <circle class="pulse-orb-1" cx="220" cy="140" r="130" fill="#38bdf8" />
+    <circle class="pulse-orb-2" cx="980" cy="280" r="150" fill="#a855f7" />
+    <circle class="pulse-orb-1" cx="600" cy="350" r="110" fill="#06b6d4" />
+  </g>
+
+  <!-- Flowing Data Streams (Behind text) -->
+  <g opacity="0.45">
+    <path class="stream-flow" d="M -50 80 Q 300 20, 600 90 T 1250 60" fill="none" stroke="url(#maskStream)" stroke-width="2" />
+    <path class="stream-flow" d="M -50 350 Q 350 280, 700 360 T 1250 330" fill="none" stroke="url(#maskStream)" stroke-width="2.5" />
+    <path class="stream-flow" d="M -50 200 Q 400 260, 800 170 T 1250 220" fill="none" stroke="rgba(56, 189, 248, 0.2)" stroke-width="1.5" />
+  </g>
+
+  <!-- Dynamic Masking Illustration Element: Query -> Mask Engine -> Redacted Data -->
+  <g transform="translate(180, 275)" opacity="0.85">
+    <!-- Stream Node 1 -->
+    <rect x="0" y="0" width="220" height="42" rx="21" fill="url(#cardGrad)" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.5" />
+    <text x="110" y="26" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" text-anchor="middle">
+      SELECT ssn, credit_card
+    </text>
+
+    <!-- Connector Arrow -->
+    <path d="M 230 21 L 285 21" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-dasharray="4,4" class="stream-flow" />
+    <polygon points="288,21 280,17 280,25" fill="#38bdf8" />
+
+    <!-- Stream Node 2 (Mask Engine) -->
+    <rect x="295" y="-4" width="250" height="50" rx="25" fill="url(#cardGrad)" stroke="url(#primaryGlow)" stroke-width="2" filter="url(#subtleGlow)" />
+    <text x="420" y="27" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" text-anchor="middle">
+      ⚡ Dynamic Masking Engine
+    </text>
+
+    <!-- Connector Arrow -->
+    <path d="M 555 21 L 610 21" stroke="#c084fc" stroke-width="2" stroke-linecap="round" stroke-dasharray="4,4" class="stream-flow" />
+    <polygon points="613,21 605,17 605,25" fill="#c084fc" />
+
+    <!-- Stream Node 3 -->
+    <rect x="620" y="0" width="220" height="42" rx="21" fill="url(#cardGrad)" stroke="rgba(192, 132, 252, 0.4)" stroke-width="1.5" />
+    <text x="730" y="26" fill="#34d399" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" text-anchor="middle">
+      ***-**-6789 &bull; &bull;&bull;&bull;&bull; 4111
+    </text>
+  </g>
+
+  <!-- FOREGROUND CONTENT: Header, Title, Subtitle, Badges (Crisp, High Contrast) -->
+  <g id="foreground">
+    <!-- Top Category Pill -->
+    <g transform="translate(600, 52)">
+      <rect x="-135" y="-14" width="270" height="28" rx="14" fill="rgba(30, 41, 59, 0.9)" stroke="rgba(56, 189, 248, 0.5)" stroke-width="1.2" />
+      <text x="0" y="5" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="700" letter-spacing="1.5" text-anchor="middle">
+        🛡️ CURATED SECURITY ECOSYSTEM
+      </text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="600" y="118" fill="url(#primaryGlow)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="46" font-weight="900" letter-spacing="-0.5" text-anchor="middle" filter="url(#subtleGlow)">
+      Awesome Dynamic Data Masking
+    </text>
+
+    <!-- Subtitle / Tagline -->
+    <text x="600" y="160" fill="#f1f5f9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="500" text-anchor="middle">
+      Query-Time Redaction &bull; Policy-as-Code &bull; Transparent Proxies &bull; PII Anonymization
+    </text>
+
+    <!-- Feature Highlights / Tags -->
+    <text x="600" y="195" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="400" text-anchor="middle">
+      Enterprise SaaS Market Breakdown &bull; Battle-Tested Open Source Repositories &bull; Zero-Trust Data Governance
+    </text>
+
+    <!-- Bottom Metadata Indicators -->
+    <g transform="translate(600, 375)">
+      <rect x="-240" y="-15" width="480" height="30" rx="15" fill="rgba(15, 23, 42, 0.75)" stroke="rgba(148, 163, 184, 0.2)" stroke-width="1" />
+      <text x="0" y="5" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500" text-anchor="middle">
+        🔒 GDPR &bull; HIPAA &bull; PCI-DSS &bull; DPDP Compliance Ready
+      </text>
+    </g>
+  </g>
+</svg>
