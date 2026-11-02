@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Dynamic-Data-Masking/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Dynamic-Data-Masking?style=social" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Dynamic-Data-Masking/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Dynamic-Data-Masking?style=social" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Dynamic-Data-Masking/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Dynamic-Data-Masking?style=social" alt="GitHub Forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Dynamic-Data-Masking/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="License" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
@@ -75,73 +75,73 @@ Market concentration is **moderately concentrated**:
 
 *Top open-source projects for dynamic column masking, real-time AI guardrails, PII detection, and database anonymization. Sorted in descending order by GitHub stargazers count.*
 
-### 1. [Bytebase](https://github.com/bytebase/bytebase) [![GitHub stars](https://img.shields.io/github/stars/bytebase/bytebase?style=social&color=white)](https://github.com/bytebase/bytebase/stargazers)
+### 1. [Bytebase](https://github.com/bytebase/bytebase) [![GitHub_Stars](https://img.shields.io/github/stars/bytebase/bytebase?style=social&color=white)](https://github.com/bytebase/bytebase/stargazers)
 - **Primary Focus**: 🛡️ Database DevSecOps &amp; Dynamic Data Masking
 - **Tech Stack**: Go, TypeScript, Vue
 - **License**: Apache-2.0
 - **Summary**: Bytebase provides unified database governance, schema migrations, and query access management. It features enterprise-grade **dynamic data masking** across 20+ database engines (PostgreSQL, MySQL, ClickHouse, Snowflake, BigQuery, etc.), redacting sensitive columns at query runtime based on user roles and project environments.
 
-### 2. [Microsoft Presidio](https://github.com/data-privacy-stack/presidio) [![GitHub stars](https://img.shields.io/github/stars/data-privacy-stack/presidio?style=social&color=white)](https://github.com/data-privacy-stack/presidio/stargazers)
+### 2. [Microsoft Presidio](https://github.com/data-privacy-stack/presidio) [![GitHub_Stars](https://img.shields.io/github/stars/data-privacy-stack/presidio?style=social&color=white)](https://github.com/data-privacy-stack/presidio/stargazers)
 - **Primary Focus**: 🔍 PII Detection, Anonymization &amp; Redaction SDK
 - **Tech Stack**: Python, spaCy, Transformers
 - **License**: MIT
 - **Summary**: The industry-standard library for detecting and anonymizing Personally Identifiable Information (PII) in unstructured text, images, and tabular columns. Offers customizable recognizers (NLP + regex pattern matching) and anonymization operators (redact, hash, mask, encrypt, replace).
 
-### 3. [Neosync](https://github.com/nucleuscloud/neosync) [![GitHub stars](https://img.shields.io/github/stars/nucleuscloud/neosync?style=social&color=white)](https://github.com/nucleuscloud/neosync/stargazers)
+### 3. [Neosync](https://github.com/nucleuscloud/neosync) [![GitHub_Stars](https://img.shields.io/github/stars/nucleuscloud/neosync?style=social&color=white)](https://github.com/nucleuscloud/neosync/stargazers)
 - **Primary Focus**: 🔄 Open-Source Developer Data Anonymization &amp; Synthetic Data Platform
 - **Tech Stack**: Go, Next.js, React
 - **License**: MIT
 - **Summary**: Modern developer platform to monitor, detect PII, and anonymize production database data across environments. Allows engineers to build data masking pipelines, generate relational synthetic test data, and safely replicate masked subsets into staging/QA.
 
-### 4. [Greenmask](https://github.com/GreenmaskIO/greenmask) [![GitHub stars](https://img.shields.io/github/stars/GreenmaskIO/greenmask?style=social&color=white)](https://github.com/GreenmaskIO/greenmask/stargazers)
+### 4. [Greenmask](https://github.com/GreenmaskIO/greenmask) [![GitHub_Stars](https://img.shields.io/github/stars/GreenmaskIO/greenmask?style=social&color=white)](https://github.com/GreenmaskIO/greenmask/stargazers)
 - **Primary Focus**: 🐘 PostgreSQL Database Anonymization &amp; Masking Utility
 - **Tech Stack**: Go
 - **License**: Apache-2.0
 - **Summary**: A stateless logical database backup and anonymization utility designed natively for PostgreSQL. Supports deterministic obfuscation, synthetic generation, and database subsetting without copying raw production PII to developer machines.
 
-### 5. [Apache Ranger](https://github.com/apache/ranger) [![GitHub stars](https://img.shields.io/github/stars/apache/ranger?style=social&color=white)](https://github.com/apache/ranger/stargazers)
+### 5. [Apache Ranger](https://github.com/apache/ranger) [![GitHub_Stars](https://img.shields.io/github/stars/apache/ranger?style=social&color=white)](https://github.com/apache/ranger/stargazers)
 - **Primary Focus**: 🏛️ Enterprise Centralized Data Access &amp; Dynamic Column Masking Engine
 - **Tech Stack**: Java
 - **License**: Apache-2.0
 - **Summary**: The bedrock dynamic masking and governance engine for big data and Hadoop architectures. Provides native query-time column masking for Apache Hive and Spark (redact, partial mask, hash, custom UDFs) backed by centralized RBAC/ABAC policies and complete audit trails.
 
-### 6. [Hoop.dev](https://github.com/hoophq/hoop) [![GitHub stars](https://img.shields.io/github/stars/hoophq/hoop?style=social&color=white)](https://github.com/hoophq/hoop/stargazers)
+### 6. [Hoop.dev](https://github.com/hoophq/hoop) [![GitHub_Stars](https://img.shields.io/github/stars/hoophq/hoop?style=social&color=white)](https://github.com/hoophq/hoop/stargazers)
 - **Primary Focus**: 🤖 Runtime AI Guardrail &amp; Database Dynamic Masking Proxy
 - **Tech Stack**: Go, TypeScript
 - **License**: AGPL-3.0
 - **Summary**: An AI and human access gateway that sits in front of production databases and LLM agents. Dynamically intercepts database queries and terminal sessions to mask PII/sensitive data on-the-fly and block destructive commands in real time.
 
-### 7. [Datanymizer](https://github.com/datanymizer/datanymizer) [![GitHub stars](https://img.shields.io/github/stars/datanymizer/datanymizer?style=social&color=white)](https://github.com/datanymizer/datanymizer/stargazers)
+### 7. [Datanymizer](https://github.com/datanymizer/datanymizer) [![GitHub_Stars](https://img.shields.io/github/stars/datanymizer/datanymizer?style=social&color=white)](https://github.com/datanymizer/datanymizer/stargazers)
 - **Primary Focus**: 🦀 High-Performance Database Dumper with Anonymization
 - **Tech Stack**: Rust
 - **License**: Apache-2.0
 - **Summary**: Fast and flexible database anonymizer written in Rust. Replaces production database tables with realistic fake data using templates and regex rules during dump creation, ensuring compliance before data leaves production boundaries.
 
-### 8. [Visulima Redact](https://github.com/visulima/visulima) [![GitHub stars](https://img.shields.io/github/stars/visulima/visulima?style=social&color=white)](https://github.com/visulima/visulima/stargazers)
+### 8. [Visulima Redact](https://github.com/visulima/visulima) [![GitHub_Stars](https://img.shields.io/github/stars/visulima/visulima?style=social&color=white)](https://github.com/visulima/visulima/stargazers)
 - **Primary Focus**: 📜 High-Speed TypeScript &amp; JavaScript Redaction Library
 - **Tech Stack**: TypeScript
 - **License**: MIT
 - **Summary**: Modular library for deep-object redaction, handling circular references, regex rules, and customizable PII masking across JSON objects, application logs, and API payload layers.
 
-### 9. [PostgreSQL Anonymizer](https://github.com/neondatabase/postgresql_anonymizer) [![GitHub stars](https://img.shields.io/github/stars/neondatabase/postgresql_anonymizer?style=social&color=white)](https://github.com/neondatabase/postgresql_anonymizer/stargazers)
+### 9. [PostgreSQL Anonymizer](https://github.com/neondatabase/postgresql_anonymizer) [![GitHub_Stars](https://img.shields.io/github/stars/neondatabase/postgresql_anonymizer?style=social&color=white)](https://github.com/neondatabase/postgresql_anonymizer/stargazers)
 - **Primary Focus**: 🧩 In-Database Dynamic Masking Extension for PostgreSQL
 - **Tech Stack**: C, PL/pgSQL
 - **License**: PostgreSQL License
 - **Summary**: A declarative PostgreSQL extension implementing in-engine **Dynamic Masking**. Roles marked as masked automatically receive obfuscated data for specified columns at query execution time via standard SQL security labels (`SECURITY LABEL`).
 
-### 10. [VeilDB](https://github.com/veildb/veildb) [![GitHub stars](https://img.shields.io/github/stars/veildb/veildb?style=social&color=white)](https://github.com/veildb/veildb/stargazers)
+### 10. [VeilDB](https://github.com/veildb/veildb) [![GitHub_Stars](https://img.shields.io/github/stars/veildb/veildb?style=social&color=white)](https://github.com/veildb/veildb/stargazers)
 - **Primary Focus**: 🐳 Self-Hosted Client-Agent Masked Database Dumps
 - **Tech Stack**: PHP, Symfony, Docker
 - **License**: MIT
 - **Summary**: Self-hosted anonymization suite featuring an agent-based architecture where raw database dumps are processed entirely within your private network before sanitized dumps are delivered to developers.
 
-### 11. [MaskOps](https://github.com/fcarvajalbrown/MaskOps) [![GitHub stars](https://img.shields.io/github/stars/fcarvajalbrown/MaskOps?style=social&color=white)](https://github.com/fcarvajalbrown/MaskOps/stargazers)
+### 11. [MaskOps](https://github.com/fcarvajalbrown/MaskOps) [![GitHub_Stars](https://img.shields.io/github/stars/fcarvajalbrown/MaskOps?style=social&color=white)](https://github.com/fcarvajalbrown/MaskOps/stargazers)
 - **Primary Focus**: ⚡ Rust-Powered Apache Arrow / Polars PII Masking Plugin
 - **Tech Stack**: Rust, Python (Polars)
 - **License**: MIT
 - **Summary**: Native Polars plugin engineered for ultra-high-throughput tabular data pipelines. Benchmarked at **~479,000 rows/second** (4,800× faster than typical Python NLP loops), providing instant regex, check-digit validation, and format-preserving masking.
 
-### 12. [Blindfold](https://github.com/blindfold-dev/Blindfold) [![GitHub stars](https://img.shields.io/github/stars/blindfold-dev/Blindfold?style=social&color=white)](https://github.com/blindfold-dev/Blindfold/stargazers)
+### 12. [Blindfold](https://github.com/blindfold-dev/Blindfold) [![GitHub_Stars](https://img.shields.io/github/stars/blindfold-dev/Blindfold?style=social&color=white)](https://github.com/blindfold-dev/Blindfold/stargazers)
 - **Primary Focus**: 🛡️ Multi-Language PII Masking SDK &amp; MCP Server
 - **Tech Stack**: Python, TypeScript, Go, Java, .NET
 - **License**: Open Source
